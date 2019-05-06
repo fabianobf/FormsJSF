@@ -14,15 +14,15 @@
 		<h:panelGrid columns="2">
 			<f:facet name="header">Formulário</f:facet>
 			<h:outputText value="ID:" />
-			<h:inputText value="#{idUsuario}" />
+			<h:inputText value="#{formularioBean.idUsuario}" />
 			<h:outputText value="Nome:" />
-			<h:inputText value="#{usuarioNome}" />
+			<h:inputText value="#{formularioBean.usuarioNome}" />
 			<h:outputText value="Senha:" />
-			<h:inputSecret value="#{usuarioSenha}" maxlength="6" size="10" type="password"/>
+			<h:inputSecret value="#{formularioBean.usuarioSenha}" maxlength="6" size="10" type="password"/>
 			<h:outputText value="Descrição:" />
-			<h:inputTextarea id="text-area-id" value="#{usuarioDescricao}"
-				required="true" requiredMessage="Address is required" cols="50"
-				rows="10"></h:inputTextarea>
+			<h:inputTextarea id="text-area-id" value="#{formularioBean.usuarioDescricao}"
+				required="true" requiredMessage="Address is required" cols="40"
+				rows="4"></h:inputTextarea>
 			<h:commandButton value="Cadastrar" icon="ui-icon-star"
 				action="respostaFormulario" update="messages">
 			</h:commandButton>
